@@ -118,7 +118,8 @@ class StocksScraper:
 
 
 if __name__ == "__main__":
-	driver = webdriver.Chrome()
+	service = Service(ChromeDriverManager().install())
+	driver = webdriver.Chrome(service=service)
 	driver.maximize_window()
 
 	url = "https://finance.yahoo.com/"
